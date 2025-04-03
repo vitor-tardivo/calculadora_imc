@@ -23,8 +23,10 @@ export default function App() {
       >
 
         <Box
-          marginY={`16px`}
+          marginY={`16px`} display="flex" alignItems="center" gap={1}
         >
+          <img src="../public/calculadora.png" alt="Icone Calculadora" width="32" height="32" />
+
           <Typography variant='h5' fontWeight={'700'} >
             Calculadora IMC
           </Typography>
