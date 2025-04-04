@@ -1,4 +1,4 @@
-import { Card, Box, Typography } from '@mui/material';
+import { Card, Box, Typography, TextField, Button } from '@mui/material';
 
 export default function App() {
 
@@ -32,10 +32,14 @@ export default function App() {
           </Typography>
         </Box>
 
-        <Box>
-          <Typography>
-            entradas
-          </Typography>
+        <Box
+          display="flex" flexDirection="column" gap={2} width="80%"
+        >
+          <TextField label="Peso (kg)" variant="outlined" fullWidth />
+          <TextField label="Altura (m)" variant="outlined" fullWidth />
+          <Button variant="contained" color="primary">
+            Calcular IMC
+          </Button>
         </Box>
 
         <Box>
