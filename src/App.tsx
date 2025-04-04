@@ -27,9 +27,7 @@ export default function App() {
         >
           <img src="../public/calculadora.png" alt="Icone Calculadora" width="32" height="32" />
 
-          <Typography variant='h5' fontWeight={'700'} >
-            Calculadora IMC
-          </Typography>
+          <Typography variant='h5' fontWeight={'700'} >Calculadora IMC</Typography>
         </Box>
 
         <Box
@@ -42,10 +40,16 @@ export default function App() {
           </Button>
         </Box>
 
-        <Box>
-          <Typography>
-            resultado
-          </Typography>
+        <Box 
+          marginY="16px"
+          width="80%"
+          display="flex"
+          flexDirection="column"
+          alignItems="flex-start"
+        >
+          <Typography variant="h6" fontWeight={'700'}>Resultado:</Typography>
+          <Typography>Seu IMC é: (22,5)</Typography>
+          <Typography>Classificação: (Peso normal)</Typography>
         </Box>
 
       </Card>
