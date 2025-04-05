@@ -1,5 +1,5 @@
-import { Card, Box, Typography, TextField, Button } from '@mui/material';
-import { useIMC } from './hooks/useimc';
+import { Card, Box, Typography, TextField, Button } from '@mui/material'
+import { useIMC } from './hooks/useimc'
 
 export default function App() {
   const {
@@ -11,7 +11,7 @@ export default function App() {
     classificacao,
     erro,
     calcularIMC
-  } = useIMC();
+  } = useIMC()
 
   return (
     <Box
