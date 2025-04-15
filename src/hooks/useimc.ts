@@ -68,6 +68,14 @@ export function useIMC() {
     }))
   }
 
+  const resetar = () => {
+    setPeso('')
+    setAltura('')
+    setIMC(null)
+    setClassificacao('')
+    localStorage.removeItem('ultimoIMC')
+  }
+
   return {
     peso,
     setPeso,
@@ -77,5 +85,6 @@ export function useIMC() {
     classificacao,
     erro,
     calcularIMC,
+    resetar
   }
 }

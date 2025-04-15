@@ -10,7 +10,8 @@ export default function App() {
     imc,
     classificacao,
     erro,
-    calcularIMC
+    calcularIMC,
+    resetar
   } = useIMC()
 
   return (
@@ -19,7 +20,7 @@ export default function App() {
       justifyContent={'center'}
       alignItems={'flex-start'}
       width={'100vw'}
-      height={'100vh'}
+      minHeight={'100vh'}
     >
       <Card
       sx={{
@@ -28,7 +29,7 @@ export default function App() {
         justifyContent: 'flex-start',
         alignItems: 'center',
         width: '100%',
-        marginTop: '144px',
+        marginY: '144px',
         marginX: '16px',
       }}
       >
@@ -63,11 +64,20 @@ export default function App() {
             width="80%"
             display="flex"
             flexDirection="column"
-            alignItems="flex-start"
+            alignItems="center"
           >
-            <Typography variant="h6" fontWeight={'700'}>Resultado:</Typography>
-            <Typography>Seu IMC é: {imc}</Typography>
-            <Typography>Classificação: {classificacao}</Typography>
+            <Typography variant="h6" align="left" width="100%" fontWeight={'700'}>Resultado:</Typography>
+            <Typography align="left" width="100%">Seu IMC é: {imc}</Typography>
+            <Typography align="left" width="100%">Classificação: {classificacao}</Typography>
+
+            <Button 
+              variant="contained" 
+              color="secondary" 
+              sx={{ marginTop: '16px' }}
+              onClick={resetar}
+            >
+              Apagar
+            </Button>
           </Box>
         )}
 
