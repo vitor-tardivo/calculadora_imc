@@ -1,19 +1,36 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/calculadora.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="apple-mobile-web-app-title" content="IMC Calc">
-    <link rel="apple-touch-icon" href="/calculadora.png">
-    
-    <title>Calculadora IMC</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/png" href="calculadora.png" />
+  <title>Calculadora de IMC</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <div class="card">
+      <div class="header">
+        <img src="calculadora.png" alt="Ícone Calculadora" width="32" height="32" />
+        <h1>Calculadora IMC</h1>
+      </div>
+
+      <div class="form">
+        <input type="text" id="peso" placeholder="Peso (kg)" />
+        <input type="text" id="altura" placeholder="Altura (m)" />
+        <button id="calcular">CALCULAR IMC</button>
+        <p class="erro" id="erro"></p>
+      </div>
+
+      <div id="resultado" class="resultado hidden">
+        <h2>Resultado:</h2>
+        <p id="valor-imc"></p>
+        <p id="classificacao"></p>
+        <button id="apagar">APAGAR</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
 </html>
